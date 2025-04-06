@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    background: #F0F2F0;
+    background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);
+    background: linear-gradient(to right, #000C40, #F0F2F0);
+    font-family: "Poppins";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    top: 20px;
+    left: 0;
+    width: 250px;
+    height: 60px;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+}
+
+#text{
+    margin-left: -25px;
+    font-size: x-large;
+    font-weight: 500;
+    color: white;
+}
+#title svg{
+    transform: rotate(-30deg);
+}
+
+.dd-glyph-svg path {
+    fill: rgb(79, 130, 83);
+}
+
+#box{
+    width: 70%;
+    height: 70%;
+
+    z-index: 1;
+    display: flex;
+}
+
+#image-section{
+    width: 50%;
+    height: 100%;
+    
+}
+
+#image-section img{
+    height: 100%;
+    width: 100%;
+}
+
+#credential-section{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#signup div{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+#signup div input{
+    width: 50%;
+}
+
+#signup div select{
+    width: 50%;
+}
+
+#credential-section #signup{
+    height: 80%;
+    padding: 0 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+#credential-section #signup input, button, select{
+    padding: 15px 25px;
+    border-radius: 7px;
+    font-size: medium;
+    border: none;
+    outline: none;
+
+    background-color: white;
+}
+
+#credential-section #signup button{
+    width: 200px;
+    align-self: center;
+    background-color: black;
+    color: white;
+}
+
+#credential-section #signup button:hover{
+    cursor: pointer;
+}
+
+#signup-head{
+    width: 100%;
+    
+    
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#moveto-signin{
+    padding: 0 50px;
+    color: white;
+    align-self: flex-start;
+}
+
+#moveto-signin a{
+    text-decoration: none;
+    color: black
+}

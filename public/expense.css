@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    background-color: #3F4F44;
+}
+
+/* NAVBAR */
+#navbar {
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    height: 60px;
+    width: 100vw;
+    padding: 0 30px;
+    padding-right: 150px;
+    background-color: rgb(44, 57, 48, 0.8);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar -> Company name */
+#company {
+    height: 50px;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#logo {
+    transform: rotate(-30deg);
+}
+
+.dd-glyph-svg path {
+    fill: rgb(255, 255, 255);
+}
+
+#text {
+    font-size: x-large;
+    font-weight: 500;
+    color: white;
+}
+
+#navbar-option {
+    font-size: 15px;
+    color: white;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Option -> Item 01 */
+#nav-title-01 {
+    padding: 0 25px;
+}
+
+#items-01 {
+    overflow: hidden;
+
+    top: 65px;
+    position: absolute;
+
+    border-radius: 7px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#items-01 button {
+    padding: 5px 15px;
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+#items-01 div div {
+    font-size: 7px;
+}
+
+#items-01 button:hover {
+    background-color: #E2E0C8;
+    cursor: pointer;
+}
+
+#nav-title-01:hover {
+    cursor: pointer;
+}
+
+/* Option -> Item 02 */
+#items-02 {
+    font-size: 13px;
+
+    overflow: hidden;
+    color: black;
+    top: 65px;
+    position: absolute;
+
+    border-radius: 7px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#items-02 div {
+    padding: 5px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#items-02 div div {
+    margin: 0;
+    padding: 0;
+}
+
+#items-02 div a {
+    display: flex;
+    align-items: center;
+}
+
+#items-02 div:hover {
+    background-color: #E2E0C8;
+    cursor: pointer;
+}
+
+#nav-title-02 {
+    padding: 0 25px;
+}
+
+#nav-title-02:hover {
+    cursor: pointer;
+}
+
+#nav-title-03:hover {
+    cursor: pointer;
+}
+
+/* Option -> Item 03 */
+#nav-title-03 {
+    padding: 0 25px;
+}
+
+/* SIDEBAR */
+#sidebar {
+    top: 60px;
+    left: 0;
+    position: fixed;
+
+    height: calc(100vh - 60px);
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    background-color: #A7B49E;
+
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+}
+
+
+/* Sidebar ->  selection button */
+#three-lines {
+    width: 30px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+
+    align-self: self-end;
+}
+
+#three-lines:hover {
+    cursor: pointer;
+}
+
+/* Sidebar -> User Profile */
+#profile-section {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Sidebar -> options */
+#lists div svg {
+    width: 25px;
+}
+
+#lists {
+    transition: all 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#lists div {
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 15px;
+
+    display: flex;
+    gap: 15px;
+}
+
+#lists div:hover {
+    background-color: #E2E0C8;
+    cursor: pointer;
+}
+
+/* Sidebar (width - 80px) */
+#sidebar.collapsed {
+    width: 80px;
+}
+
+#sidebar.collapsed #profile-name,
+#sidebar.collapsed #lists div div,
+#sidebar.collapsed #cpy {
+    display: none;
+}
+
+.collapsed #sidebar {
+    padding: 25px 0px;
+}
+
+.collapsed #three-lines {
+    align-self: center;
+}
+
+.collapsed #profile-section {
+    display: flex;
+    justify-content: center;
+}
+
+.collapsed #lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.collapsed #lists div {
+    padding: 7px 0;
+    font-size: 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.collapsed #lists div:hover {
+    background-color: #E2E0C8;
+}
+
+#sidebar.collapsed+#content {
+    margin-left: 80px;
+}
+
+/* Company name (Sidebar) */
+#cpy {
+    font-size: small;
+    color: #3F4F44;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* CONTENT */
+#content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 100px 20px;
+
+    transition: margin 0.3s ease-in-out;
+    background-color: #3F4F44;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Content -> Greeting */
+#greeting {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+/* -> Template */
+#important {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Add Expense Button */
+button {
+    width: 200px;
+    padding: 15px 25px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    background-color: white;
+    margin-bottom: 20px;
+
+    align-self: self-start;
+}
+
+#important button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Important Expense Section */
+
+#important-section-heading {
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+#important-section {
+    padding: 10px;
+    height: 240px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+#important-section div {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+/* Yesterday */
+#yesterday-section-heading {
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    margin-bottom: 20px;
+}
+
+#yesterday-section {
+    padding: 10px;
+    height: 120px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+#yesterday-section div {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+/* Week */
+#week-section-heading {
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    margin-bottom: 20px;
+}
+
+#week-section {
+    padding: 10px;
+    height: 240px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+#week-section div {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+/* Previous */
+#previous-section-heading {
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    margin-bottom: 20px;
+}
+
+#previous-section {
+    padding: 10px;
+    height: 240px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+#previous-section div {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+/* Plan */
+#plan-section-heading {
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#plan-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Plan sub-section-01 */
+#plan-section-01 {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#plan-section-subSection-01 {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px 50px;
+    color: white;
+
+    display: flex;
+    gap: 50px;
+}
+
+#plan-txt-01-heading {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+#plan-text-01 {
+    font-size: 15px;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Plan sub-section-02 */
+#plan-section-02 {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+#plan-section-subSection-02 {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px 50px;
+    color: white;
+
+    display: flex;
+    gap: 50px;
+}
+
+#plan-txt-02-heading {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+#plan-text-02 {
+    font-size: 15px;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Community */
+#community-heading {
+    color: white;
+    font-size: xx-large;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.community-icon:hover{
+    cursor: pointer;
+}
+
+/* Premium */
+#premium{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#premium-heading{
+    font-size: xx-large;
+    color: white;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#premium-heading svg path{
+    fill: rgb(255, 215, 0, 0.7);
+}
+
+#premium-slogan{
+    font-size: 20px;
+    margin-top: 30px;
+    color: white;
+}
+
+#premium-section{
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#premium-feature-01, #premium-feature-02{
+    font-size: large;
+    color: white;
+    line-height: 3.0rem;
+}
+
+#premium-feature-head-01, #premium-feature-head-02{
+    font-size: x-large;
+}
+
+#premium-feature-01{
+    color: rgb(174, 174, 174);
+}
+
+#premium-feature-head-01{
+    color: white;
+}
+
+#premium-feature-head-02{
+    color: rgb(234, 213, 89)
+}
+
+/* Premium button */
+#buy-premium{
+    margin-top: 20px;
+    background-color: rgb(255, 215, 0, 0.7);
+    color: #000;
+}
+
+#buy-premium:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Footer */
+#footer{
+    padding: 0 50px;
+    padding-top: 20px;
+    color: white;
+    border-top: 1px solid gray;
+    margin-bottom: -50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-company{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#footer-company-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-option-head{
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.footer-option{
+    line-height: 2rem;
+}
+
+#footer-text{
+    padding: 0 50px;
+    font-size: 12px;
+    color: rgb(173, 173, 173);
+    text-align: justify;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: -50px;
+}
